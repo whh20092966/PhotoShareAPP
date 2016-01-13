@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical" >
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp" >
+
+            <com.yuan.cfycomment.RoundedImageView
+                android:id="@+id/iv_user_photo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/iv_photo"
+                app:border_color="#C5C1AA"
+                app:border_width="1px"
+                app:corner_radius="20dp" />
+
+            <TextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="60dp"
+                android:text="王尼玛"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:text="55分钟"
+                android:textColor="#919191"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_user_comment"
+                style="@style/BigTitleString"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:text="这里是作者发的状态"
+                android:textSize="15sp" />
+            
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/e" />
+
+            
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp" >
+
+                <Button
+                    android:layout_width="20dp"
+                    android:layout_height="17dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="75dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/good" />
+
+                <Button
+                    android:id="@+id/tv_user_reply"
+                    android:layout_width="20dp"
+                    android:layout_height="17dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="25dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/review" />
+
+                <Button
+                    android:layout_width="20dp"
+                    android:layout_height="17dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/more" />
+
+            </RelativeLayout>
+            
+            <RelativeLayout 
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginBottom="5dp"
+                >
+                <ImageView 
+                    android:layout_width="13dp" 
+                    android:layout_height="13dp"
+                    android:src="@drawable/small_good"
+                    android:layout_marginLeft="15dp"
+                    android:layout_centerVertical="true"
+                    />
+                
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="188次站"
+                    android:textColor="#000000"
+                    android:textSize="13sp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_centerVertical="true"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.yuan.cfycomment.view.CommentListView
+            android:id="@+id/lv_user_comment_replys"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:divider="@null" />
+    </FrameLayout>
+
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="30dp"
+        android:background="@drawable/find_wallet_layout_layer"
+        >
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#919191"
+            android:textSize="13sp"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+            android:text="我来说两句..."
+            />
+   </RelativeLayout>
+   
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#EDEDED"
+        />
+            
+</LinearLayout>
